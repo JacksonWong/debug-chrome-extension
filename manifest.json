@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "console_debug_extension",
+    "description": "",
+    "version": "0.9.0",
+    "browser_action": { //browserAction的icon
+        "default_icon": "debug_off.png",
+        "default_title" : "Debugging Utility"
+    },
+    "icons": {  //管理扩展里显示的icon
+        "48": "debug.png"
+    },
+    "background": {
+        //run as an Event page，非长驻留，只在事件触发时加载
+        //"persistent": false,
+        "scripts": ["js/store.min.js", "js/background.js"]
+    },
+    "content_scripts":[{
+    	"run_at": "document_start",
+	    "js": ["js/injectScript.js", "js/main.js"],
+	    "matches": [ "<all_urls>" ]
+	}],
+    "permissions": [
+        "tabs",
+        // "http://*/*",
+        // "https://*/*",
+        "<all_urls>"
+    ]
+}
