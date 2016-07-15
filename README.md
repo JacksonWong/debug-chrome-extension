@@ -1,5 +1,5 @@
 # debug-chrome-extension
-A simple chrome extension that provides debugging function for web development.
+###A simple chrome extension that provides debugging function for web development.
 
 #####Usage:  
 1. Clone or Download the package;  
@@ -19,9 +19,13 @@ now a debug() function has injected to your web page. you can invoking it in you
 >>>...  
 >>>...
     
-#####How to clean up the debugging code?
+###How to clean up the debugging code?
 you can clean up the debugging code with plugin 'gulp-replace' automatically.  
 e.g.  
 >`gulp.src('./src/foo.js')`  
 >>`.pipe(replace(/debug\(.*\);?/g, ''))`  
 >>`.pipe(gulp.dest('./dist/js/'));`
+
+#####License: MIT
+
+#####Author: HuangJianSheng(85000175@qq.com)
