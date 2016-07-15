@@ -11,12 +11,12 @@ now a debug() function has injected to your web page. you can invoking it in you
 accepted parameters:
 debug(param1, [param2], [...'group title']);
 
-Outputs:
-group title
-  param_data1
-  param_data2
-  ...
-  trace stack
-    ...
-    ...
+#####Outputs:  
+>>group title  
+>>>param_data1  
+>>>param_data2  
+>>>...  
+>>trace stack  
+>>>...  
+>>>...
     
